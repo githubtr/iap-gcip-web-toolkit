@@ -27,88 +27,11 @@ const tenantsConfig = {
   _: {
     displayName: 'My Organization',
     signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID      
     ],
     tosUrl: '/tos',
     privacyPolicyUrl: '/privacypolicy',
-  },
-  // Single tenant flow.
-  1036546636501: {
-    displayName: 'My Company',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      {
-        provider: 'saml.okta-cicp-app',
-        providerName: 'SAML',
-        buttonColor: '#4666FF',
-        iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-      },
-    ],
-    signInFlow: 'redirect',
-    // A boolean which determines whether to immediately redirect to the provider's site or
-    // instead show the default 'Sign in with Provider' button when there is only a single
-    // federated provider in signInOptions. In order for this option to take effect, the
-    // signInOptions must only hold a single federated provider (like 'google.com') and
-    // signInFlow must be set to 'redirect'.
-    immediateFederatedRedirect: false,
-    tosUrl: '/tos',
-    privacyPolicyUrl: '/privacypolicy',
-  },
-  // Multiple tenants flow.
-  'tenant-a-esjtn': {
-    displayName: 'Company A',
-    buttonColor: '#007bff',
-    iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      {
-        provider: 'saml.okta-cicp-app',
-        providerName: 'SAML',
-        buttonColor: '#4666FF',
-        iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-      },
-    ],
-    tosUrl: '/tos',
-    privacyPolicyUrl: '/privacypolicy',
-  },
-  'tenant-b-59ih0': {
-    displayName: 'Company B',
-    buttonColor: '#007bff',
-    iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      {
-        provider: 'saml.okta-cicp-app',
-        providerName: 'SAML',
-        buttonColor: '#4666FF',
-        iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-      },
-    ],
-    tosUrl: '/tos',
-    privacyPolicyUrl: '/privacypolicy',
-  },
-  'tenant-c-iooex': {
-    displayName: 'Company C',
-    buttonColor: '#007bff',
-    iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    ],
-    tosUrl: '/tos',
-    privacyPolicyUrl: '/privacypolicy',
-  },
-  'tenant-d-9t831': {
-    displayName: 'Company D',
-    buttonColor: '#007bff',
-    iconUrl: 'https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png',
-    signInOptions: [
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    ],
-    tosUrl: '/tos',
-    privacyPolicyUrl: '/privacypolicy',
-  },
+  }
 };
 
 @Component({

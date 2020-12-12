@@ -17,6 +17,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'navbar',
   template: `
+   
     <nav class="navbar navbar-expand-lg">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -29,6 +30,7 @@ import { Component, Input } from '@angular/core';
         </li>
       </ul>
     </nav>
+   
     <!-- Modal -->
     <div class="modal" id="originalUrlModal" tabindex="-1"
         role="dialog" aria-labelledby="original-url-modal-label"
